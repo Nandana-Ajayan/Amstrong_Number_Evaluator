@@ -1,0 +1,75 @@
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+}
+
+/* App container */
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Centering the login/register form */
+.App > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* vertical centering */
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Input fields */
+input[type="email"],
+input[type="number"] {
+  padding: 10px;
+  width: 250px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Messages */
+p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Tabs navigation */
+nav {
+  margin: 20px 0;
+}
+
+nav button {
+  margin: 0 10px;
+}
+
+/* Tab content area */
+.tabContent {
+  margin-top: 20px;
+}

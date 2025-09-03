@@ -34,6 +34,7 @@ func RegisterRoutes(r *mux.Router, db *gorm.DB) {
 	}).Methods("GET")
 
 	// Register user
+	// Register or login user
 	r.HandleFunc("/users", func(w http.ResponseWriter, r *http.Request) {
 		var req struct{ Email string }
 		_ = json.NewDecoder(r.Body).Decode(&req)
@@ -41,12 +42,26 @@ func RegisterRoutes(r *mux.Router, db *gorm.DB) {
 			writeJSON(w, http.StatusBadRequest, apiError{"email required"})
 			return
 		}
-		u := User{Email: req.Email}
-		if err := db.Create(&u).Error; err != nil {
-			writeJSON(w, http.StatusConflict, apiError{"email exists"})
+
+		var user User
+		err := db.Where("email = ?", req.Email).First(&user).Error
+		if err != nil {
+			if err == gorm.ErrRecordNotFound {
+				// Create new user
+				user = User{Email: req.Email}
+				if err := db.Create(&user).Error; err != nil {
+					writeJSON(w, http.StatusInternalServerError, apiError{"failed to create user"})
+					return
+				}
+				writeJSON(w, http.StatusCreated, user)
+				return
+			}
+			writeJSON(w, http.StatusInternalServerError, apiError{"db error"})
 			return
 		}
-		writeJSON(w, http.StatusCreated, u)
+
+		// User exists → return user_id
+		writeJSON(w, http.StatusOK, user)
 	}).Methods("POST")
 
 	// Get Armstrong numbers for a user
