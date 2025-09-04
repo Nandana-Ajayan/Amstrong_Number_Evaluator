@@ -29,14 +29,14 @@ Armstrong Number Evaluator is a full-stack web application built with **Go** and
 
 ## Setup and Installation
 
-### 1. Clone the Repository
+ **1. Clone the Repository**
 
 ```bash
 git clone https://github.com/your-username/armstrong_number_evaluator.git
 cd armstrong_number_evaluator
 ```
 
-## 2. Set Up PostgreSQL Database
+ **2. Set Up PostgreSQL Database**## 
 
 Open **pgAdmin4** or your preferred PostgreSQL client.
 
