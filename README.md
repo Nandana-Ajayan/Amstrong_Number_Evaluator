@@ -32,7 +32,7 @@ Armstrong Number Evaluator is a full-stack web application built with **Go** and
  **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/armstrong_number_evaluator.git
+git clone https://github.com/Nandana-Ajayan/armstrong_number_evaluator.git
 cd armstrong_number_evaluator
 ```
 
