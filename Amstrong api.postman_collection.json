@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "07a9cff9-7c3f-4e6a-b772-aedafa7897aa",
+		"name": "Amstrong api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43660559",
+		"_collection_link": "https://nandanaa-7123091.postman.co/workspace/Nandana-A's-Workspace~137d9a3d-96c3-4154-8cd7-d3c149156382/collection/43660559-07a9cff9-7c3f-4e6a-b772-aedafa7897aa?action=share&source=collection_link&creator=43660559"
+	},
+	"item": [
+		{
+			"name": "user_register",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "server_status",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "verify",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Amstrong_numbers",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "retriver_api",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
