@@ -65,7 +65,8 @@ CREATE TABLE armstrong_numbers (
 );
 
 ```
-##3. Configure the Backend (Go)
+**3. Configure the Backend (Go)**
+
 
 - Navigate to the backend directory:
 
@@ -75,23 +76,19 @@ cd backend
 - Open the `db.go` file and update the `dsn` variable with your PostgreSQL credentials:
 
 
-##4. Configure the Backend (Go)
+**3. Configure the Frontend (React)**
 
-- Navigate to the frontend directory :
 
-```bash
-cd frontend
-``Install the Node.js dependencies using
-```bash
-npm install
+- Navigate to the frontend directory.
+- Install node.js dependencies.
 
-# Running the Application
+Running the Application
 
 Run the backend and frontend servers in two separate terminals.
 
-### Start the Backend Server
+ Start the Backend Server
 
-1. In a terminal, navigate to the backend directory:
+1. In a terminal, navigate to the backend directory.
 .Run the following command:go run .
 .The backend server will start and be available at:http://localhost:8080
 
