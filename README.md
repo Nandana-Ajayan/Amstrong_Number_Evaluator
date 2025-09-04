@@ -47,13 +47,15 @@ CREATE DATABASE armstrong_db;
 ```
 
 Create the required tables using the following query:
+```sql
 -- Users Table
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
-
+```
+```sql
 -- Armstrong Numbers Table
 CREATE TABLE armstrong_numbers (
     id SERIAL PRIMARY KEY,
@@ -62,7 +64,7 @@ CREATE TABLE armstrong_numbers (
     created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
-
+```
 ##3. Configure the Backend (Go)
 
 - Navigate to the backend directory:
