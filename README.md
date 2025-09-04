@@ -79,7 +79,10 @@ cd backend
 **3. Configure the Frontend (React)**
 
 
-- Navigate to the frontend directory.
+- Navigate to the frontend directory:
+   ```bash
+cd frontend
+```
 - Install node.js dependencies.
 
 Running the Application
