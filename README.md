@@ -81,8 +81,8 @@ cd backend
 
 - Navigate to the frontend directory:
    ```bash
-cd frontend
-```
+  cd frontend
+   ```
 - Install node.js dependencies.
 
 Running the Application
