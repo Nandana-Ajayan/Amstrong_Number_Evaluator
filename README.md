@@ -34,6 +34,7 @@ Armstrong Number Evaluator is a full-stack web application built with **Go** and
 ```bash
 git clone https://github.com/your-username/armstrong_number_evaluator.git
 cd armstrong_number_evaluator
+```
 
 ## 2. Set Up PostgreSQL Database
 
@@ -43,3 +44,58 @@ Create a new database:
 
 ```sql
 CREATE DATABASE armstrong_db;
+```
+
+Create the required tables using the following query:
+-- Users Table
+CREATE TABLE users (
+    user_id SERIAL PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Armstrong Numbers Table
+CREATE TABLE armstrong_numbers (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(user_id) ON DELETE CASCADE,
+    number BIGINT NOT NULL,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+
+##3. Configure the Backend (Go)
+
+- Navigate to the backend directory:
+
+```bash
+cd backend
+```
+- Open the `db.go` file and update the `dsn` variable with your PostgreSQL credentials:
+
+
+##4. Configure the Backend (Go)
+
+- Navigate to the frontend directory :
+
+```bash
+cd frontend
+``Install the Node.js dependencies using
+```bash
+npm install
+
+# Running the Application
+
+Run the backend and frontend servers in two separate terminals.
+
+### Start the Backend Server
+
+1. In a terminal, navigate to the backend directory:
+.Run the following command:go run .
+.The backend server will start and be available at:http://localhost:8080
+
+Start the Frontend Server
+.In a new terminal, navigate to the frontend directory:
+.Run the following command:npm start
+.This will automatically open the application in your default web browser at: http://localhost:3000
+
+
