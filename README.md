@@ -100,4 +100,37 @@ Start the Frontend Server
 .Run the following command:npm start
 .This will automatically open the application in your default web browser at: http://localhost:3000
 
+## Flow of application 
+
+1. **User Registration / Login**  
+   - A new user enters their email.  
+   - If the email is not in the database, a new user account is created.  
+   - If the email already exists, the user is logged in.  
+
+2. **Number Verification**  
+   - After login, the user can input a number.  
+   - The backend checks whether the number is an **Armstrong number**.  
+   - If it is Armstrong, the number is **saved in the database** under that user’s ID.  
+   - If not Armstrong, an error message is returned without saving.  
+
+3. **Personal Dashboard**  
+   - Logged-in users can view all Armstrong numbers they have saved.  
+   - Data retrieved using the endpoint:  
+     ```
+     GET /users/{id}/numbers
+     ```
+
+4. **Global Dashboard** *(requires login)*  
+   - A logged-in user can also view all registered users along with their saved Armstrong numbers.  
+   - Data retrieved using the endpoint:  
+     ```
+     GET /users/all
+     ```
+
+5. **Data Management**  
+   - If a user is deleted, all Armstrong numbers linked to that user are automatically deleted (**CASCADE delete**).  
+   - Ensures database integrity and avoids orphaned records.  
+
+---
+
 
